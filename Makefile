@@ -104,7 +104,7 @@ libraries:
 	$(TEMPLATESDIR)/TemplatesCompiler
 
 CEDILLE_DEPS = $(SRC) Makefile libraries ./src/templates.agda ./src/CedilleParser.hs ./src/CedilleLexer.hs ./src/CedilleCommentsLexer.hs ./src/CedilleOptionsLexer.hs ./src/CedilleOptionsParser.hs
-CEDILLE_BUILD_CMD = $(AGDA) $(LIB) --ghc-flag=-rtsopts -c $(SRCDIR)/main.agda
+CEDILLE_BUILD_CMD = $(AGDA) $(LIB) --compile-dir=$(OUTDIR) --ghc-flag=-rtsopts -c $(SRCDIR)/main.agda
 cedille:	$(CEDILLE_DEPS)
 		$(CEDILLE_BUILD_CMD)
 		mv $(SRCDIR)/main $@
