@@ -1,6 +1,6 @@
 IAL=~/ial
 
-AGDA=agda
+AGDA=agda --malonzodir dist
 #AGDA=/home/astump/agda-2.5.1.2/.cabal-sandbox/bin/agda
 
 SRCDIR=src
@@ -78,7 +78,7 @@ FILES = $(AUTOGEN) $(AGDASRC)
 SRC = $(FILES:%=$(SRCDIR)//%)
 OBJ = $(SRC:%.agda=%.agdai)
 
-LIB = --library-file=libraries --library=ial --library=cedille
+LIB = --library-file=libraries --library=ial --library=cedille 
 
 all: cedille # elisp
 
