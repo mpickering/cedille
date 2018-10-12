@@ -1,6 +1,6 @@
 IAL=~/ial
 
-AGDA=agda --malonzodir dist
+AGDA=agda --malonzo-dir .
 #AGDA=/home/astump/agda-2.5.1.2/.cabal-sandbox/bin/agda
 
 SRCDIR=src
